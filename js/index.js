@@ -107,21 +107,40 @@ textField2.setAttribute("id", "input2");
 
 formField2.appendChild(textField2);
 
-const yeet = document.querySelectorAll(".text-content").forEach(el => {
+document.querySelectorAll(".text-content").forEach(el => {
   el.appendChild(formField2);
   el.appendChild(p)
 });
 
 document.getElementById("input2").onfocus = () => {
-  textField2.style.backgroundColor = "yellow";
+  textField2.style.backgroundColor = "lemonchiffon";
 };
 //
 
 
-// input
+//10th input
 document.getElementById('input2').addEventListener('input', () =>{
     const inputChange = document.getElementById('input2').value;
     document.getElementById('pfield').innerHTML = "you wrote: " + inputChange;
+})
+//
+
+//preventDefault
+const body = document.querySelector('body');
+body.addEventListener('click', () => {
+    body.style.backgroundColor = 'forestgreen'
+})
+
+const navCon = document.querySelector('.container');
+navCon.addEventListener('click', (e)=>{
+    navCon.style.backgroundColor = 'gold';
+    e.stopPropagation();
+})
+
+const link = document.querySelector('.nav-link');
+link.addEventListener('click', (e) =>{
+    link.style.backgroundColor= 'firebrick';
+    e.stopPropagation();
 })
 
 
